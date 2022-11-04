@@ -20,7 +20,7 @@ function App() {
 
       <div className='cards__section'>
 
-        <h3>Welcome to Property</h3>
+        <h3>Welcome to Property Kamal</h3>
 
       </div>
 
