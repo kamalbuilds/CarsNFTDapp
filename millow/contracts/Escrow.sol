@@ -8,6 +8,7 @@ interface IERC721 {
         uint256 _id
     ) external;
 }
+// this will be used to transfer nft from seller to the escrow contract
 
 contract Escrow {
     // state variables
@@ -27,4 +28,33 @@ contract Escrow {
         inspector = _inspector;
         lender = _lender;
     }
+
+    modifier onlySeller() {
+        require(msg.sender == seller, "Only seller can call this method");
+        _;
+    }
+
+
+    mapping(uint256 => bool) public isListed; // nft_id is mapped with isListed or not ?
+    mapping(uint256 => uint256) public purchasePrice;
+    mapping(uint256 => uint256) public escrowAmount;
+    mapping(uint256 => address) public buyer;
+
+    // function to list the property 
+    function list(
+        uint256 _nftID,
+        address _buyer,
+        uint256 _purchasePrice,
+        uint256 _escrowAmount
+    ) public payable onlySeller {
+        // Transfer NFT from seller to this contract , this function can only be called by the seller with the help of modifier.
+        IERC721(nftAddress).transferFrom(msg.sender, address(this), _nftID);
+
+        isListed[_nftID] = true;
+        purchasePrice[_nftID] = _purchasePrice;
+        escrowAmount[_nftID] = _escrowAmount;
+        buyer[_nftID] = _buyer;
+    }
+
+
 }
