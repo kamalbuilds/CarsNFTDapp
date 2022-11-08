@@ -27,19 +27,23 @@ function App() {
     const provider = new ethers.providers.Web3Provider(window.ethereum)
     setProvider(provider)
     const network = await provider.getNetwork()
-
+    console.log(`network is `,network);
     const realEstate = new ethers.Contract(config[network.chainId].realEstate.address, RealEstate, provider);
-    
+
     console.log(realEstate);
     const totalSupply = await realEstate.totalSupply()
-    const homes = []
+    const homes = [];
+    
+    console.log('the total supply is',totalSupply);
 
     for (var i = 1; i <= totalSupply; i++) {
       const uri = await realEstate.tokenURI(i)
       const response = await fetch(uri)
       const metadata = await response.json()
       homes.push(metadata)
+      console.log(metadata);
     }
+    console.log(homes);
 
     setHomes(homes)
 
