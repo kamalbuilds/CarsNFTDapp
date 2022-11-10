@@ -31,7 +31,7 @@ function App() {
     const realEstate = new ethers.Contract(config[network.chainId].realEstate.address, RealEstate, provider);
     
     console.log(realEstate);
-    const totalSupply = await realEstate.totalSupply()
+    const totalSupply = await realEstate.totalSupply();
     const homes = []
 
     for (var i = 1; i <= totalSupply; i++) {
@@ -69,7 +69,7 @@ function App() {
 
       <div className='cards__section'>
 
-        <h3>Homes For You</h3>
+        <h3>Cars For You</h3>
 
         <hr />
 
