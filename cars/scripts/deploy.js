@@ -23,7 +23,7 @@ async function main() {
   console.log(`Minting 3 properties...\n`)
 
   for (let i = 0; i < 3; i++) {
-    const transaction = await realEstate.connect(seller).mint(`https://ipfs.io/ipfs/QmQVcpsjrA6cr1iJjZAodYwmPekYgbnXGo4DFubJiLc2EB/${i + 1}.json`)
+    const transaction = await realEstate.connect(seller).mint(`https://ipfs.moralis.io:2053/ipfs/QmcAPVaYvovejL97Un7iGbamkmRMq1gZXnZM9iXNU7cDj6/cars/metadata/${i + 1}.json`)
     await transaction.wait()
   }
 
@@ -48,13 +48,13 @@ async function main() {
   }
 
   // Listing properties...
-  transaction = await escrow.connect(seller).list(1, buyer.address, tokens(20), tokens(10))
+  transaction = await escrow.connect(seller).list(1, buyer.address, tokens(6.6), tokens(10))
   await transaction.wait()
 
-  transaction = await escrow.connect(seller).list(2, buyer.address, tokens(15), tokens(5))
+  transaction = await escrow.connect(seller).list(2, buyer.address, tokens(20), tokens(5))
   await transaction.wait()
 
-  transaction = await escrow.connect(seller).list(3, buyer.address, tokens(10), tokens(5))
+  transaction = await escrow.connect(seller).list(3, buyer.address, tokens(75), tokens(5))
   await transaction.wait()
 
   console.log(`Finished.`)
