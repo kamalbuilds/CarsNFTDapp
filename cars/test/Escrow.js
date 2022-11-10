@@ -7,7 +7,7 @@ const tokens = (n) => {
 
 describe('Escrow', () => {
     let buyer, seller, inspector, lender
-    let realEstate, escrow
+    let car, escrow
 
     beforeEach(async () => {
         // Setup accounts given by hardhat by default
@@ -15,11 +15,11 @@ describe('Escrow', () => {
         // essentially buyer = signer[0] , if let signer = await ethers.getSigners()
         console.log(seller._isSigner);
         // Deploy Real Estate
-        const RealEstate = await ethers.getContractFactory('RealEstate')
-        realEstate = await RealEstate.deploy()
+        const car = await ethers.getContractFactory('car')
+        car = await car.deploy()
 
         // Mint 
-        let transaction = await realEstate.connect(seller).mint("https://ipfs.io/ipfs/QmTudSYeM7mz3PkYEWXWqPjomRPHogcMFSq7XAvsvsgAPS")
+        let transaction = await car.connect(seller).mint("https://ipfs.io/ipfs/QmTudSYeM7mz3PkYEWXWqPjomRPHogcMFSq7XAvsvsgAPS")
         await transaction.wait()
 
         // .connect here is used to sign the contract on the behalf of seller.
@@ -27,14 +27,14 @@ describe('Escrow', () => {
         const Escrow = await ethers.getContractFactory('Escrow')
 
         escrow = await Escrow.deploy(
-            realEstate.address,
+            car.address,
             seller.address,
             inspector.address,
             lender.address
         )
 
         // Approve Property
-        transaction = await realEstate.connect(seller).approve(escrow.address, 1)
+        transaction = await car.connect(seller).approve(escrow.address, 1)
         await transaction.wait()
 
         // List Property
@@ -47,7 +47,7 @@ describe('Escrow', () => {
         it('Returns NFT address', async () => {
             const result = await escrow.nftAddress()
             console.log(result);
-            expect(result).to.be.equal(realEstate.address)
+            expect(result).to.be.equal(car.address)
         })
 
         it('Returns seller', async () => {
@@ -88,7 +88,7 @@ describe('Escrow', () => {
         })
 
         it('Updates ownership', async () => {
-            expect(await realEstate.ownerOf(1)).to.be.equal(escrow.address)
+            expect(await car.ownerOf(1)).to.be.equal(escrow.address)
         })
     })
 
@@ -159,7 +159,7 @@ describe('Escrow', () => {
         })
 
         it('Updates ownership', async () => {
-            expect(await realEstate.ownerOf(1)).to.be.equal(buyer.address)
+            expect(await car.ownerOf(1)).to.be.equal(buyer.address)
         })
 
         it('Updates balance', async () => {
