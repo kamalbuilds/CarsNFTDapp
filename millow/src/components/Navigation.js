@@ -12,7 +12,6 @@ const Navigation = ({ account, setAccount }) => {
         <nav>
             <ul className='nav__links'>
                 <li><a href="#">Buy</a></li>
-                <li><a href="#">Rent</a></li>
                 <li><a href="#">Sell</a></li>
             </ul>
 
