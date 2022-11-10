@@ -65,11 +65,12 @@ function App() {
   return (
     <div>
       <Navigation account={account} setAccount={setAccount} />
+      <br />
       <Search />
 
       <div className='cards__section'>
 
-        <h3>Cars For You</h3>
+        <h3 text-align="center">Cars For You</h3>
 
         <hr />
 

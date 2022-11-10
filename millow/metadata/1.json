@@ -1,33 +1,25 @@
 {
-    "name": "Luxury NYC Penthouse",
-    "address": "157 W 57th St APT 49B, New York, NY 10019",
-    "description": "Luxury Penthouse located in the heart of NYC",
-    "image": "https://ipfs.io/ipfs/QmQUozrHLAusXDxrvsESJ3PYB3rUeUuBAvVWw6nop2uu7c/1.png",
+    "name": "Maruti Baleno",
+    "description": "Maruti Baleno is a 5 seater Hatchback. It is available in 9 variants, a 1197 cc, BS6 and 2 transmission options: Manual & Automatic",
+    "image": "https://ipfs.moralis.io:2053/ipfs/QmX1W7p55mirr8UVXnHmiTseVifmhsWdK9cXadb2oS82HD/millow/cars/baleno.png",
     "id": "1",
     "attributes": [
         {
             "trait_type": "Purchase Price",
-            "value": 20
+            "value": 6.6
         },
         {
-            "trait_type": "Type of Residence",
-            "value": "Condo"
+            "trait_type": "Mileage",
+            "value": "30.61 km/kg"
         },
         {
-            "trait_type": "Bed Rooms",
-            "value": 2
+            "trait_type": "Engine (upto)",
+            "value": "1197 cc"
+
         },
         {
-            "trait_type": "Bathrooms",
-            "value": 3
-        },
-        {
-            "trait_type": "Square Feet",
-            "value": 2200
-        },
-        {
-            "trait_type": "Year Built",
-            "value": 2013
+            "trait_type": "Boot Space",
+            "value": 318
         }
     ]
 }

@@ -1,33 +1,25 @@
 {
-    "name": "WA Nature Home",
-    "address": "183 Woodland Drive, Camano Island, WA 98282",
-    "description": "Comfy island home on Camano Island",
-    "image": "https://ipfs.io/ipfs/QmQUozrHLAusXDxrvsESJ3PYB3rUeUuBAvVWw6nop2uu7c/3.png",
+    "name": "Ferrari SF90 Stradale",
+    "description": "Ferrari SF90 Stradale is a 2 seater Coupe. It is available with Automatic transmission.",
+    "image": "https://ipfs.moralis.io:2053/ipfs/QmRxNGsYV1wT9gEueiEWTbKxRQkYVVKffrUbhioeYxnZfg/millow/cars/ferrari.png",
     "id": "3",
     "attributes": [
         {
             "trait_type": "Purchase Price",
-            "value": 10
+            "value": 750
         },
         {
-            "trait_type": "Type of Residence",
-            "value": "Single family residence"
+            "trait_type": "Mileage",
+            "value": "16.39 kmpl"
         },
         {
-            "trait_type": "Bed Rooms",
-            "value": 3
+            "trait_type": "Engine (upto)",
+            "value": "3990 cc"
+
         },
         {
-            "trait_type": "Bathrooms",
-            "value": 3
-        },
-        {
-            "trait_type": "Square Feet",
-            "value": 2202
-        },
-        {
-            "trait_type": "Year Built",
-            "value": 2020
+            "trait_type": "Seats",
+            "value": 2
         }
     ]
 }
