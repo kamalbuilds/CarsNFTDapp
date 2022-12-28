@@ -1,5 +1,7 @@
 # Cars NFT DApp
 
+Idea behind- tokenizing real world assest (Vechile) on a blockchain.
+
 ## Technology Stack & Tools
 
 - Solidity (Writing Smart Contracts & Tests)
@@ -12,7 +14,7 @@
 - [Ethers.js](https://docs.ethers.io/v5/) (Blockchain Interaction)
 - [React.js](https://reactjs.org/) (Frontend Framework)
 
-# Problems that it is aiming to solve 
+# Problems that we are aiming to solve 
 
 # Security: 
 
