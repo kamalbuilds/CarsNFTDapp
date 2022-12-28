@@ -2,6 +2,8 @@
 
 Idea behind- tokenizing real world assest (Vechile) on a blockchain.
 
+Demo Project Video - https://www.youtube.com/watch?v=D8XWFNSFlmg
+
 ## Technology Stack & Tools
 
 - Solidity (Writing Smart Contracts & Tests)
