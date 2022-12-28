@@ -4,6 +4,12 @@ Idea behind- tokenizing real world assest (Vechile) on a blockchain.
 
 Demo Project Video - https://www.youtube.com/watch?v=D8XWFNSFlmg
 
+"Our revolutionary dapp brings the power of blockchain technology to the world of car 🚗 buying and selling. With the ability to tokenize real-world assets, our platform allows buyers to securely and transparently purchase cars through an escrow contract. The key players in this process - the buyer, seller, inspector, and funder - all play crucial roles in ensuring a smooth and successful transaction.
+
+But this dapp offers more than just a hassle-free car buying experience. Upon completion of the transaction, the buyer is awarded an NFT of their car, providing easy verification of ownership in times of security checks. No longer will you have to worry about lost or forged documents - with our dapp, your ownership is securely recorded on the blockchain.
+
+So why wait? Join the future of car buying and selling today with this innovative dapp, and experience the power and convenience of blockchain technology."
+
 ## Technology Stack & Tools
 
 - Solidity (Writing Smart Contracts & Tests)
